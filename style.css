@@ -26,19 +26,55 @@
 
 	.app {
 		display: grid;
-		grid-template-rows: 70px 70px calc(100vh - 140px);
+		grid-template-rows: 80px 80px calc(100vh - 140px);
 		grid-template-columns: 1fr;
 		grid-template-areas: 'header' 'toolsNav' 'drawingArea';
 	}
 
 	.header {
 		grid-area: header;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.tools-bar {
 		grid-area: toolsNav;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.drawing-area {
 		grid-area: drawingArea;
 	}
+
+	.tools {
+		display: flex;
+		justify-content: space-between;
+		width: 200px;
+		background-color: #fff;
+		border-radius: 50px;
+		padding: 5px 5px;
+	
+	}
+
+	.tool {
+		cursor: pointer;
+		width: 60px;
+		height: 60px;
+		display: grid;
+		place-items:center;	
+	} 
+
+	.tool:hover {
+		background-color: var(--primary-color-100);
+		border-radius: 99999px
+	}
+
+	.selected {
+		background-color: var(--primary-color-100);
+	}
+
+	
+
