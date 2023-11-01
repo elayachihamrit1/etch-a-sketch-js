@@ -2,6 +2,9 @@
 
 	* {
 		font-family: 'Inter', sans-serif;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
 	}
 
 	:root {
@@ -14,4 +17,28 @@
 
 	.bg-clr-prim-100 {
 		background-color: var(--primary-color-100);
+	}	
+
+
+	.txt-clr-neut-600 {
+		color: var(--neutral-600);
+	}
+
+	.app {
+		display: grid;
+		grid-template-rows: 70px 70px calc(100vh - 140px);
+		grid-template-columns: 1fr;
+		grid-template-areas: 'header' 'toolsNav' 'drawingArea';
+	}
+
+	.header {
+		grid-area: header;
+	}
+
+	.tools-bar {
+		grid-area: toolsNav;
+	}
+
+	.drawing-area {
+		grid-area: drawingArea;
 	}
