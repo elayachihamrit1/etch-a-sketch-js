@@ -5,7 +5,7 @@
 	const eraser = document.querySelector('.eraser');
 	const reset = document.querySelector('.reset');
 	const color = '#0DABDD';
-
+	let isDrawing = false;
 
 	createGrid(32);
 
@@ -23,14 +23,27 @@
 			cell.classList.add('cell');
 			drawBoard.append(cell);
 		
-			cell.addEventListener('click', draw);
-		}
+			cell.addEventListener('mousedown', () => {
+				isDrawing = true;
+				cell.style.backgroundColor = `${color}`;
+			});
 
+			cell.addEventListener('mouseenter', () => {
+				
+				if(isDrawing) {
+				cell.style.backgroundColor = `${color}`;
+				}
+				
+			});
+
+			cell.addEventListener('mouseup', () => {
+				isDrawing = false;
+			});
+
+		}
 	}
 
 
-
-	function draw(e) {
-		e.target.style.backgroundColor = `${color}`;
-	}	
+		function draw(e) {
+		}	
 
