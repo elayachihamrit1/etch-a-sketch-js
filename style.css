@@ -26,7 +26,7 @@
 
 	.app {
 		display: grid;
-		grid-template-rows: 80px 80px calc(100vh - 140px);
+		grid-template-rows: 80px 80px calc(100vh - 160px);
 		grid-template-columns: 1fr;
 		grid-template-areas: 'header' 'toolsNav' 'drawingArea';
 	}
@@ -47,7 +47,21 @@
 
 	.drawing-area {
 		grid-area: drawingArea;
+		display: grid;
+		place-items:center;
+		padding: 5px;
+	
 	}
+
+	.board {
+		display: grid;
+		width: 500px;
+		height: 500px;
+		grid-template-rows: repeat(16, 1fr);
+		grid-template-columns: repeat(16, 1fr);
+		border: 1px solid #e8e8e8;
+	}
+
 
 	.tools {
 		display: flex;
