@@ -75,8 +75,8 @@
 
 	.tool {
 		cursor: pointer;
-		width: 60px;
-		height: 60px;
+		width: 40px;
+		height: 40px;
 		display: grid;
 		place-items:center;	
 	} 
@@ -90,5 +90,12 @@
 		background-color: var(--primary-color-100);
 	}
 
+	.cell {
+		border: 1px dotted var(--primary-color-100);
+	}
+	
+	.cell:hover {	
+		background-color: var(--primary-color-100);
+	}
 	
 
