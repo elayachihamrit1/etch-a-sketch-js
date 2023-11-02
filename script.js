@@ -4,7 +4,8 @@
 	const pen = document.querySelector('.pen');
 	const eraser = document.querySelector('.eraser');
 	const reset = document.querySelector('.reset');
-	const paintColor = '#0DABDD';
+	const colPicker = document.querySelector('.colsPicker');
+	let paintColor = colPicker.value;
 	
 	let drawingMode = false;
 	let erasingMode = false;
@@ -76,6 +77,7 @@
 	
 	reset.addEventListener('click', resetGrid);
 
+
 	function resetGrid() {
 		const cells = document.querySelectorAll('.cell');
 
@@ -84,3 +86,8 @@
 		});
 			
 	}
+
+
+	colPicker.addEventListener('input', (e) => {
+		paintColor = e.target.value;
+	})
