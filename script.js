@@ -73,3 +73,14 @@
 		
 	});
 
+	
+	reset.addEventListener('click', resetGrid);
+
+	function resetGrid() {
+		const cells = document.querySelectorAll('.cell');
+
+		cells.forEach( cell =>  {
+			cell.style.backgroundColor = '#fff';
+		});
+			
+	}
