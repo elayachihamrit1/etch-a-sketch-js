@@ -98,7 +98,7 @@
 	}
 
 	.cell {
-		border: 1px dotted var(--primary-color-100);
+		border: 1px dotted #a5ebff;
 	}
 	
 	.cell:hover {	
