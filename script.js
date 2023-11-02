@@ -4,15 +4,14 @@
 	const pen = document.querySelector('.pen');
 	const eraser = document.querySelector('.eraser');
 	const reset = document.querySelector('.reset');
-	const color = '#0DABDD';
-	let isDrawing = false;
+	const paintColor = '#0DABDD';
+	
+	let drawingMode = false;
+	let erasingMode = false;
 
 	createGrid(32);
 
-
-
 	function createGrid(size) {
-		
 
 		for(i = 0 ; i < size * size; i++) {
 			
@@ -24,26 +23,53 @@
 			drawBoard.append(cell);
 		
 			cell.addEventListener('mousedown', () => {
-				isDrawing = true;
-				cell.style.backgroundColor = `${color}`;
+				drawingMode = true;
+				erasingMode = eraser.classList.contains(`active`); // true
+				updateCell(cell);
 			});
 
 			cell.addEventListener('mouseenter', () => {
-				
-				if(isDrawing) {
-				cell.style.backgroundColor = `${color}`;
-				}
-				
+					
+					if(drawingMode) {
+						updateCell(cell);
+					}
 			});
 
 			cell.addEventListener('mouseup', () => {
-				isDrawing = false;
+				drawingMode = false;
 			});
+
+
+	function updateCell(cell) {
+
+		if(erasingMode) {
+			cell.style.backgroundColor = `#fff`;
+		
+		} else {
+			cell.style.backgroundColor = `${paintColor}`;
+		}
+
+	}	
 
 		}
 	}
 
 
-		function draw(e) {
-		}	
+	eraser.addEventListener('click', () => {
+	eraser.classList.add('active');		
+	pen.classList.remove('active');	
+	drawingMode = false;
+	erasingMode = true;	
+
+
+	});
+
+	pen.addEventListener('click', () => {
+	drawingMode = false;	
+	erasingMode = false;	
+
+	pen.classList.add('active');
+	eraser.classList.remove('active');		
+		
+	});
 
