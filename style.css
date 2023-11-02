@@ -105,4 +105,7 @@
 		background-color: var(--primary-color-100);
 	}
 	
+	.tool.reset:hover {
+		background-color: #ff7474;
+	}
 
