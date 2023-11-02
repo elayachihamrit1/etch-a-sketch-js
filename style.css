@@ -12,16 +12,21 @@
 	--primary-color-700 : #0DABDD;
 	--primary-color-100: #EDFBFF;
 	--neutral-600 : #696969;
+	--neutral-1OO : #FBFAFA;
 
 	}
 
-	.bg-clr-prim-100 {
-		background-color: var(--primary-color-100);
+	.bg-clr-neut-100 {
+		background-color: var(--neutral-1OO);
 	}	
 
 
 	.txt-clr-neut-600 {
 		color: var(--neutral-600);
+	}
+
+	.active {
+		background-color: var(--primary-color-100);
 	}
 
 	.app {
@@ -59,7 +64,7 @@
 		height: 500px;
 		grid-template-rows: repeat(16, 1fr);
 		grid-template-columns: repeat(16, 1fr);
-		border: 1px solid #e8e8e8;
+		border: 1px solid #fbfafa;
 	}
 
 
@@ -79,6 +84,8 @@
 		height: 40px;
 		display: grid;
 		place-items:center;	
+		border-radius: 99999px
+
 	} 
 
 	.tool:hover {
