@@ -39,7 +39,7 @@
 	.header {
 		grid-area: header;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 	}
 
@@ -109,3 +109,6 @@
 		background-color: #ff7474;
 	}
 
+	.author {
+		color: var(--primary-color-700);
+	}
