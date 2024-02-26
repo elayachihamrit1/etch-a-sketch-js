@@ -71,7 +71,7 @@
 	.tools {
 		display: flex;
 		justify-content: space-between;
-		width: 200px;
+		width: auto;
 		background-color: #fff;
 		border-radius: 50px;
 		padding: 5px 5px;
@@ -84,7 +84,8 @@
 		height: 40px;
 		display: grid;
 		place-items:center;	
-		border-radius: 99999px
+		border-radius: 99999px;
+		margin-right: 10px;
 
 	} 
 
